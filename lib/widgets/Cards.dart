@@ -15,24 +15,30 @@ class Cards extends StatelessWidget {
         vertical: 8,
       ),
       child: Card(
-        child: Column(children: 
-          [ Text(
-            item.product,
-            ),
-            Row(
-              children: [
-                Text('${item.price.toStringAsFixed(2)} ₪'),
-                const Spacer(),
-                Row(children: [
-                  Icon(icons[item.category]),
-                  SizedBox(width: 5,),
-                  Text(item.formatedDate),
-                ],),
-              ],  
-            ),
-          ],
+        
+        elevation: 18,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+          child: Column(children: 
+            [ 
+              SizedBox(width: 10,),
+              Text(
+              item.product,
+              ),
+              Row(
+                children: [
+                  Text('${item.price.toStringAsFixed(2)} ₪'),
+                  const Spacer(),
+                  Row(children: [
+                    Icon(icons[item.category]),
+                    SizedBox(width: 5,),
+                    Text(item.formatedDate),
+                  ],),
+                ],  
+              ),
+            ],
+          ),
         ),
-
       ),
     );
   }

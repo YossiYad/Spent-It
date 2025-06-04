@@ -34,4 +34,6 @@ class Item {
   final Category category;
 
   String get formatedDate => formatterDate.format(date);
+
 }
+
