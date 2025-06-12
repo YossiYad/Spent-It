@@ -46,6 +46,7 @@ class _spentItState extends State<SpentIt> {
     setState(() {
       items = [];
       checkSum();
+      Navigator.pop(context);
     });
   }
 
@@ -58,7 +59,7 @@ class _spentItState extends State<SpentIt> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Item deleted'),
-        duration: Duration(seconds: 3),
+        duration: Duration(seconds: 2),
         action: SnackBarAction(label: 'Undo', onPressed: () {
           setState(() {
             items.insert(tempIdx, temp);
